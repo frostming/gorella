@@ -241,11 +241,11 @@ class PatchClass(object):
 
     @staticmethod
     def startswith(self, prefix, start=0, end=None):
+        if end is None: end = len(self)
         if not isinstance(prefix, tuple):
             prefix = [prefix]
         for p in prefix:
             if isinstance(p, re._pattern_type):
-                if end is None: end = len(self)
                 if p.match(self, start, end) is not None: return True
             elif get_builtin_method(self.__class__, 'startswith')(
                 self, p, start, end):
@@ -254,11 +254,11 @@ class PatchClass(object):
 
     @staticmethod
     def endswith(self, suffix, start=0, end=None):
+        if end is None: end = len(self)
         if not isinstance(suffix, tuple):
             suffix = [suffix]
         for p in suffix:
             if isinstance(p, re._pattern_type):
-                if end is None: end = len(self)
                 pat, flags = p.pattern, p.flags
                 p = re.compile(pat.rstrip('$') + '$', flags)
                 if p.search(self, start, end) is not None: return True
