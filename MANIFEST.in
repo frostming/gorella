@@ -1,0 +1,4 @@
+include README.md
+include LICENSE
+include tests.py
+include tests_uni.py
