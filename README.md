@@ -1,4 +1,6 @@
 # GoRella
+[![Build Status](https://travis-ci.org/frostming/gorella.svg?branch=master)](https://travis-ci.org/frostming/gorella)
+
 Monkey patch regular expression methods to built-in string types
 
 ## Introduction
