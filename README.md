@@ -4,8 +4,7 @@
 Monkey patch regular expression methods to built-in string types
 
 ## Introduction
-This project is aiming at easing the use of regular expression,
-which is inspired by `RegExp` in JavaScript. The name comes from "gorilla" and "re". The sing-file module will monkey patch the following built-in methods of string types on its import:
+This project is aiming at easing the use of regular expression, which is inspired by `RegExp` in JavaScript. The name comes from "gorilla" and "re". The sing-file module will monkey patch the following built-in methods of string types on its import:
 
 - `replace`
 - `split` and `rsplit`
@@ -22,6 +21,11 @@ module:
 - `search`
 - `findall`
 - `finditer`
+
+## Installation
+```
+$ pip install gorella
+``
 
 ## Usage
 All you need is to import gorella in one line, everything is done for you:
